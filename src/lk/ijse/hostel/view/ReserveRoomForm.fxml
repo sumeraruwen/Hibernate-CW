@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reserveContext" prefHeight="940.0" prefWidth="1164.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.ReserveRoomFormController">
+   <children>
+      <JFXButton fx:id="btnSave" layoutX="847.0" layoutY="288.0" onAction="#btnSaveOnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="SAVE ROOM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="847.0" layoutY="397.0" onAction="#btnDeleteOnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="DELETE ROOM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnAddNewReserve" layoutX="847.0" layoutY="173.0" onAction="#btnAddNewOnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="+ NEW ROOM" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="847.0" layoutY="86.0" onAction="#btnBackOnAction" prefHeight="61.0" prefWidth="198.0" style="-fx-background-color: #fc5c4b;" text="back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtStatus" layoutX="82.0" layoutY="390.0" prefHeight="52.0" prefWidth="320.0" promptText="status" />
+      <JFXTextField fx:id="txtType" layoutX="501.0" layoutY="174.0" prefHeight="52.0" prefWidth="320.0" promptText="type" />
+      <JFXTextField fx:id="txtName" layoutX="82.0" layoutY="188.0" prefHeight="52.0" prefWidth="305.0" promptText="name" />
+      <JFXTextField fx:id="txtQtyOnHand" layoutX="84.0" layoutY="293.0" prefHeight="52.0" prefWidth="320.0" promptText="Qty Hand" />
+      <JFXTextField fx:id="txtQty" layoutX="501.0" layoutY="278.0" prefHeight="52.0" prefWidth="320.0" promptText="qty" />
+      <JFXTextField fx:id="txtKeyMoney" layoutX="486.0" layoutY="390.0" prefHeight="52.0" prefWidth="320.0" promptText="KeyMoney" />
+      <JFXComboBox fx:id="cmbId" layoutX="75.0" layoutY="91.0" prefHeight="52.0" prefWidth="289.0" promptText="Student Id" />
+      <JFXComboBox fx:id="cmbCode" layoutX="501.0" layoutY="97.0" prefHeight="52.0" prefWidth="289.0" promptText="Room Id" />
+      <TableView fx:id="tblReserveDetail" layoutX="45.0" layoutY="500.0" prefHeight="380.0" prefWidth="1101.0">
+         <columns>
+            <TableColumn prefWidth="152.0" text="resId" />
+            <TableColumn prefWidth="165.0" text="id" />
+            <TableColumn prefWidth="150.0" text="code" />
+            <TableColumn prefWidth="149.0" text="qty" />
+            <TableColumn prefWidth="200.0" text="keyMoney" />
+            <TableColumn prefWidth="146.0" text="status" />
+            <TableColumn prefWidth="137.0" text="Delete" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtResId" layoutX="84.0" layoutY="30.0" prefHeight="31.0" prefWidth="220.0" promptText="ResId" />
+   </children>
+</AnchorPane>
