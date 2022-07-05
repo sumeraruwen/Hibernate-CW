@@ -81,7 +81,7 @@ public class ReserveDetailDAOImpl implements ReserveDetailDAO {
         Transaction t1 = session.beginTransaction();
 
         session.save(entity);
-        System.out.println(entity.toString());
+       // System.out.println(entity.toString());
 
         t1.commit();
         session.close();
@@ -95,7 +95,7 @@ public class ReserveDetailDAOImpl implements ReserveDetailDAO {
         Transaction t2 = session.beginTransaction();
 
         session.update(entity);
-        System.out.println(entity.toString());
+       // System.out.println(entity.toString());
 
         t2.commit();
         session.close();

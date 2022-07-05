@@ -1,54 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" prefHeight="940.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostel.controller.DashBoardFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="182.0" layoutX="123.0" layoutY="361.0" stroke="WHITE" strokeType="INSIDE" width="395.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="182.0" layoutX="102.0" layoutY="181.0" stroke="WHITE" strokeType="INSIDE" width="395.0">
          <effect>
             <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="182.0" layoutX="571.0" layoutY="361.0" stroke="WHITE" strokeType="INSIDE" width="395.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="182.0" layoutX="550.0" layoutY="181.0" stroke="WHITE" strokeType="INSIDE" width="395.0">
          <effect>
             <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="182.0" layoutX="1024.0" layoutY="361.0" stroke="WHITE" strokeType="INSIDE" width="395.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="182.0" layoutX="1003.0" layoutY="181.0" stroke="WHITE" strokeType="INSIDE" width="395.0">
          <effect>
             <DropShadow color="#d3cece" height="11.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Label layoutX="425.0" layoutY="372.0" opacity="0.66" text="Students">
+      <Label layoutX="404.0" layoutY="192.0" opacity="0.66" text="Students">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="880.0" layoutY="372.0" opacity="0.66" text="Rooms">
+      <Label layoutX="859.0" layoutY="192.0" opacity="0.66" text="Rooms">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label layoutX="1330.0" layoutY="367.0" opacity="0.66" text="Reserve">
+      <Label layoutX="1309.0" layoutY="187.0" opacity="0.66" text="Reserve">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Separator layoutX="155.0" layoutY="490.0" opacity="0.65" prefHeight="3.0" prefWidth="344.0" />
-      <Separator layoutX="594.0" layoutY="492.0" opacity="0.65" prefHeight="3.0" prefWidth="286.0" />
-      <Separator layoutX="1044.0" layoutY="485.0" opacity="0.65" prefHeight="3.0" prefWidth="286.0" />
-      <JFXButton layoutX="151.0" layoutY="329.0" onAction="#btnAddStudentOnAction" prefHeight="104.0" prefWidth="104.0" style="-fx-background-color: #4caf50;" text="S" textFill="#dd1d1d" />
-      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="189.0" layoutY="391.0" size="35" text="" />
-      <JFXButton layoutX="598.0" layoutY="320.0" onAction="#btnAddRoomOnAction" prefHeight="104.0" prefWidth="104.0" style="-fx-background-color: #00bcd4;" text="R" />
-      <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" layoutX="632.0" layoutY="386.0" size="35" text="" />
-      <JFXButton layoutX="1051.0" layoutY="321.0" onAction="#btnReserveOnAction" prefHeight="104.0" prefWidth="104.0" style="-fx-background-color: #ff9800;" text="e" />
-      <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" layoutX="1083.0" layoutY="386.0" size="35" text="" />
+      <Separator layoutX="134.0" layoutY="310.0" opacity="0.65" prefHeight="3.0" prefWidth="344.0" />
+      <Separator layoutX="573.0" layoutY="312.0" opacity="0.65" prefHeight="3.0" prefWidth="361.0" />
+      <Separator layoutX="1023.0" layoutY="305.0" opacity="0.65" prefHeight="3.0" prefWidth="361.0" />
+      <JFXButton layoutX="130.0" layoutY="149.0" onAction="#btnAddStudentOnAction" prefHeight="104.0" prefWidth="104.0" style="-fx-background-color: #4caf50;" text="S" textFill="#dd1d1d" />
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="168.0" layoutY="211.0" size="35" text="" />
+      <JFXButton layoutX="577.0" layoutY="140.0" onAction="#btnAddRoomOnAction" prefHeight="104.0" prefWidth="104.0" style="-fx-background-color: #00bcd4;" text="R" />
+      <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" layoutX="611.0" layoutY="206.0" size="35" text="" />
+      <JFXButton layoutX="1030.0" layoutY="141.0" onAction="#btnReserveOnAction" prefHeight="104.0" prefWidth="104.0" style="-fx-background-color: #ff9800;" text="e" />
+      <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" layoutX="1062.0" layoutY="206.0" size="35" text="" />
+      <AnchorPane fx:id="dashBoardContext" layoutX="807.0" layoutY="570.0" prefHeight="338.0" prefWidth="550.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutX="181.0" layoutY="570.0" prefHeight="338.0" prefWidth="550.0" style="-fx-background-color: white;" />
+      <AreaChart fx:id="areaChart" layoutX="832.0" layoutY="459.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </AreaChart>
+      <BarChart fx:id="barchart" animated="false" layoutX="196.0" layoutY="398.0" legendSide="TOP" prefHeight="498.0" prefWidth="500.0" title="Reserve Statistics">
+         <xAxis>
+            <CategoryAxis fx:id="caId" label="Item Id" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="naSales" label="Sales" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <Circle fill="WHITE" layoutX="1328.0" layoutY="49.0" radius="27.0" stroke="WHITE" strokeType="INSIDE" />
+      <JFXTextField layoutX="1102.0" layoutY="19.0" opacity="0.54" prefHeight="39.0" prefWidth="201.0" promptText="Search...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView fill="#9e9999" glyphName="SEARCH" layoutX="1319.0" layoutY="57.0" opacity="0.64" size="21" text="" />
+      <FontAwesomeIconView fill="#514f4f" glyphName="TH_LARGE" layoutX="1378.0" layoutY="58.0" size="25" text="" />
+      <FontAwesomeIconView fill="#514f4f" glyphName="SIGN_OUT" layoutX="1428.0" layoutY="58.0" size="25" />
+      <JFXButton layoutX="1370.0" layoutY="33.0" prefHeight="28.0" prefWidth="40.0" />
+      <JFXButton layoutX="1420.0" layoutY="34.0" onAction="#btnSignOutOnAction" prefHeight="28.0" prefWidth="40.0" />
    </children>
 </AnchorPane>

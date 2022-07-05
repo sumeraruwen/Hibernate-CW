@@ -7,7 +7,6 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
-@EqualsAndHashCode
 
 public class StudentDTO {
     private String id;

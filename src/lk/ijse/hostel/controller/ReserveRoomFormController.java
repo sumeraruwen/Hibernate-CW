@@ -169,10 +169,11 @@ public class ReserveRoomFormController {
                         txtKeyMoney.setText(dto.getKeyMoney().setScale(2).toString());*/
                         txtType.setText(dto.getType());
                         txtKeyMoney.setText(dto.getKeyMoney().setScale(2).toString());
+
                        // txtQty.setText(dto.getQty().toString());
 
-//                    txtQtyOnHand.setText(tblOrderDetails.getItems().stream().filter(detail-> detail.getCode().equals(item.getCode())).<Integer>map(detail-> item.getQtyOnHand() - detail.getQty()).findFirst().orElse(item.getQtyOnHand()) + "");
-                       // Optional<ReserveDetailTM> optOrderDetail = tblReserveDetail.getItems().stream().filter(detail -> detail.getCode().equals(newItemCode)).findFirst();
+               // txtQtyOnHand.setText(tblReserveDetail.getItems().stream().filter(detail-> detail.getCode().equals(detail.getCode())).<Integer>map(detail-> detail.getQty() - detail.getQty()).findFirst().orElse(dto.getQty()) + "");
+                      //  Optional<ReserveDetailTM> optOrderDetail = tblReserveDetail.getItems().stream().filter(detail -> detail.getCode().equals(newItemCode)).findFirst();
                        // txtQtyOnHand.setText((optOrderDetail.isPresent() ? dto.getQty() - optOrderDetail.get().getQty() : dto.getQty()) + "");
                     }
 
@@ -380,8 +381,9 @@ public class ReserveRoomFormController {
        // txtResId.setText(generateNewId());
         txtType.clear();
         txtKeyMoney.clear();
+        txtStatus.clear();
         txtQty.clear();
-        txtType.requestFocus();
+        txtResId.requestFocus();
         btnSave.setDisable(false);
         btnSave.setText("Save");
         tblReserveDetail.getSelectionModel().clearSelection();

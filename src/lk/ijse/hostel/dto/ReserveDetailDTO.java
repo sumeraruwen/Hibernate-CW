@@ -9,7 +9,6 @@ import java.math.BigDecimal;
 @Setter
 @Getter
 @ToString
-@EqualsAndHashCode
 public class ReserveDetailDTO {
      private String resId;
      private String id;

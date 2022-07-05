@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 @Setter
 @Getter
 @ToString
-@EqualsAndHashCode
 
 public class RoomDTO {
     private String code;

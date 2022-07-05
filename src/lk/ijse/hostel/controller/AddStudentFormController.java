@@ -67,14 +67,14 @@ private StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFacto
             }
         });
 
-        try {
+       /* try {
             List<StudentDTO> students = studentBO.getAllCustomers();
             for (StudentDTO student : students) {
                 tblStudents.getItems().add(new StudentTM(student.getId(), student.getName(), student.getAddress(), student.getContact()));
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
 
       //  txtQty.setOnAction(event -> btnSave.fire());
         //loadAllCustomers();
@@ -144,7 +144,7 @@ private StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFacto
         if (btnSave.getText().equalsIgnoreCase("save")) {
             try {
                 if (existItem(id)) {
-                    new Alert(Alert.AlertType.ERROR, id + " already exists").show();
+                    new Alert(Alert.AlertType.INFORMATION, id + " Saved ").show();
                 }
                 //Save Item
 
@@ -216,7 +216,7 @@ private StudentBO studentBO = (StudentBO) BOFactory.getBoFactory().getBO(BOFacto
         txtName.clear();
         txtAddress.clear();
         txtContact.clear();
-        txtName.requestFocus();
+        txtId.requestFocus();
         btnSave.setDisable(false);
         btnSave.setText("Save");
         tblStudents.getSelectionModel().clearSelection();

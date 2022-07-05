@@ -94,7 +94,7 @@ public class RoomDAOImpl implements RoomDAO {
         Transaction t2 = session.beginTransaction();
 
         session.update(entity);
-        System.out.println(entity.toString());
+       // System.out.println(entity.toString());
 
         t2.commit();
         session.close();
@@ -110,7 +110,15 @@ public class RoomDAOImpl implements RoomDAO {
         if(rst.next()){
             return new Room(rst.getString(1),rst.getString(2),rst.getBigDecimal(3),rst.getInt(4));
         }*/
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction t9 = session.beginTransaction();
+
+        org.hibernate.query.Query q1 = session.createQuery("FROM Room");
+        List<Student> list = q1.list();
+
+        t9.commit();
+        session.close();
+        return list;
     }
 
     @Override

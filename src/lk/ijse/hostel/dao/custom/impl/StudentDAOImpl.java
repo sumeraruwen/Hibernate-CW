@@ -69,7 +69,7 @@ public class StudentDAOImpl implements StudentDAO {
         Transaction t1 = session.beginTransaction();
 
         session.save(entity);
-        System.out.println(entity.toString());
+       // System.out.println(entity.toString());
 
         t1.commit();
         session.close();
@@ -82,7 +82,7 @@ public class StudentDAOImpl implements StudentDAO {
         Transaction t2 = session.beginTransaction();
 
         session.update(entity);
-        System.out.println(entity.toString());
+        //System.out.println(entity.toString());
 
         t2.commit();
         session.close();
@@ -128,7 +128,7 @@ public class StudentDAOImpl implements StudentDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction t3 = session.beginTransaction();
 
-        Student stu = session.get(Student.class, id);
+        Student stu = session.load(Student.class, id);
         session.delete(stu);
 
         t3.commit();

@@ -114,7 +114,7 @@ public class AddRoomFormController {
         txtType.clear();
         txtMoney.clear();
         txtQty.clear();
-        txtType.requestFocus();
+        txtCode.requestFocus();
         btnSave.setDisable(false);
         btnSave.setText("Save");
         tblRooms.getSelectionModel().clearSelection();
@@ -146,7 +146,7 @@ public class AddRoomFormController {
         if (btnSave.getText().equalsIgnoreCase("save")) {
             try {
                 if (existItem(code)) {
-                    new Alert(Alert.AlertType.ERROR, code + " already exists").show();
+                    new Alert(Alert.AlertType.INFORMATION, code + " Saved").show();
                 }
                 //Save Item
                 roomBO.saveItem(new RoomDTO(code,type,keyMoney,qty));

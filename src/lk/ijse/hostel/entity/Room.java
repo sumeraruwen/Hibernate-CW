@@ -11,7 +11,7 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-@EqualsAndHashCode
+
 @Entity
 public class Room {
     @Id

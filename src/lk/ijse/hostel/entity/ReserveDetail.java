@@ -11,7 +11,6 @@ import java.util.List;
 @Setter
 @Getter
 @ToString
-@EqualsAndHashCode
 
 @Entity
 public class ReserveDetail {
@@ -28,6 +27,7 @@ public class ReserveDetail {
 
     @ManyToOne
     private Student student;
+
     @ManyToOne
     private Room room;
 
